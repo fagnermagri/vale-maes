@@ -1,0 +1,116 @@
+:root {
+    --rose-gold: #e7bcb9;
+    --dark-rose: #b08986;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--rose-gold);
+    background: radial-gradient(circle, #f8e1df 0%, #e7bcb9 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.main-wrapper {
+    width: 100%;
+    /*max-width: 850px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container do Vídeo */
+#video-container {
+    position: relative;
+    width: 100%;
+    /*max-width: 850px; /* Ajuste conforme o formato do seu vídeo */
+    cursor: pointer;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    line-height: 0; /* Remove espaços indesejados abaixo do vídeo */
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#hint-text {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+    pointer-events: none; /* Garante que o clique passe para o container */
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
+
+.play-button::after {
+    content: '';
+    position: absolute;
+    border-left: 15px solid var(--dark-rose);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    left: 25px;
+    top: 20px;
+}
+
+/* Voucher */
+#voucher-card {
+    display: none;
+    width: 100%;
+    max-width: 500px;
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    border: 10px double var(--rose-gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.show-voucher {
+    display: block !important;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Elementos do Texto */
+h1 { color: var(--dark-rose); letter-spacing: 2px; margin-bottom: 20px; }
+p { color: #555; line-height: 1.6; margin-bottom: 30px; }
+.studio-highlight { display: block; font-weight: 700; color: var(--dark-rose); margin-top: 10px; }
+
+.btn-schedule {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
