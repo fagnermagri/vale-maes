@@ -12,8 +12,8 @@
 }
 
 body {
-    background-color: var(--white);
-    background: radial-gradient(circle, #ffffff 0%, #f5f5dc 100%);
+    background-color: #faf9f6;
+    background: radial-gradient(circle, #ffffff 0%, #f2f0eb 100%);
     display: flex;
     justify-content: center;
     align-items: center;
