@@ -50,14 +50,16 @@ video {
 }
 
 #hint-text {
-    position: absolute;
-    top: 50px;
-    width: 100%;
     text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 45%; /* Ajuste este valor para subir ou descer o nome */
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+    width: 80%; /* Garante que nomes longos não fujam da imagem */
     font-family: 'Great Vibes', cursive;
-    color: #8c6a6d; /* Um tom de rosê escuro/cinza para combinar com a arte */
+    color: var(--rose-gold);
     /*color: #fff;*/
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: 800;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     letter-spacing: 1px;
