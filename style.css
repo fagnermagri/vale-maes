@@ -2,6 +2,8 @@
     --rose-gold: #e7bcb9;
     --dark-rose: #b08986;
     --white: #ffffff;
+    --cream: #E6E0DA;
+    --dark-cream: #C9B8B5;
 }
 
 * {
@@ -81,12 +83,44 @@ video {
     display: none;
     width: 100%;
     max-width: 500px;
-    background: var(--white);
-    padding: 40px 30px;
-    border-radius: 20px;
     text-align: center;
-    border: 10px double var(--rose-gold);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    opacity: 0;
+}
+
+/* Container relativo para que o nome obedeça aos limites da imagem */
+.voucher-wrapper {
+    position: relative;
+    width: 100%;
+    line-height: 0; /* Remove espaços abaixo da imagem */
+}
+
+.voucher-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Posicionamento do Nome Dinâmico */
+#guest-name {
+    position: absolute;
+    left: 50%;
+    top: 57%; /* Ajuste este valor para subir ou descer o nome */
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+    width: 80%; /* Garante que nomes longos não fujam da imagem */
+    
+    /* Estilo da Fonte */
+    font-family: 'Great Vibes', cursive;
+    color: #8c6a6d; /* Um tom de rosê escuro/cinza para combinar com a arte */
+    font-size: 2.5rem; /* Ajuste o tamanho conforme preferir */
+    font-weight: 400;
+    line-height: 1.2;
+    pointer-events: none; /* Evita que o texto atrapalhe cliques */
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 400px) {
+    #guest-name { font-size: 1.8rem; }
 }
 
 .show-voucher {
