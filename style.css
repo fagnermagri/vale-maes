@@ -54,8 +54,10 @@ video {
     top: 50px;
     width: 100%;
     text-align: center;
-    color: #fff;
-    font-size: 1rem;
+    font-family: 'Great Vibes', cursive;
+    color: #8c6a6d; /* Um tom de rosê escuro/cinza para combinar com a arte */
+    /*color: #fff;*/
+    font-size: 1.5rem;
     font-weight: 800;
     text-shadow: 0 2px 4px rgba(0,0,0,0.5);
     letter-spacing: 1px;
